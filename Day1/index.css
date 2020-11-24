@@ -49,7 +49,7 @@
 
 .left {
     position: absolute;
-    animation: left-ball-animation 2s infinite;
+    animation: left-ball-animation 1.5s infinite;
 }
 
 @-webkit-keyframes left-ball-animation {
@@ -59,7 +59,7 @@
         margin-top: 0;
     }
 
-    25% {
+    30% {
         transform: rotateZ(24deg);
         margin-left: -50px;
         margin-top: -12px;
@@ -75,7 +75,7 @@
 .right {
     position: absolute;
     left: 200px;
-    animation: right-ball-animation 2s infinite;
+    animation: right-ball-animation 1.5s infinite;
 }
 
 @-webkit-keyframes right-ball-animation {
@@ -85,7 +85,7 @@
         margin-top: 0;
     }
 
-    75% {
+    80% {
         transform: rotateZ(-24deg);
         margin-left: 50px;
         margin-top: -12px;
