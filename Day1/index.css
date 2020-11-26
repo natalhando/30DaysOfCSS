@@ -9,7 +9,7 @@
 
 .holder {
     position: relative;
-    top: 180px;
+    top: 130px;
     left: 100px;
     
     height: 14px;
@@ -26,7 +26,7 @@
 
     margin-left: 20px;
 
-    top: 180px;
+    top: 130px;
     left: 100px;
     
     height: calc(400px - 15px);
@@ -34,7 +34,6 @@
 }
 
 .group--ball {
-
     height: 250px;
     width: 50px;
 }
@@ -49,46 +48,36 @@
 
 .left {
     position: absolute;
-    animation: left-ball-animation 1.5s infinite;
+    animation: left-ball-animation alternate-reverse 1.2s infinite ease-out;
 }
 
 @-webkit-keyframes left-ball-animation {
-    0% {
+    0%, 50% {
         transform: rotateZ(0);
-        margin-left: 0;
-        margin-top: 0;
+        transform-origin: top;
     }
 
-    30% {
-        transform: rotateZ(24deg);
-        margin-left: -50px;
-        margin-top: -12px;
-    }
-
-    50%, 100% {
-        transform: rotateZ(0);
-        margin-left: 0px;
-        margin-top: 0;
+    100% {
+        transform: rotateZ(32deg);
+        transform-origin: top;
     }
 }
 
 .right {
     position: absolute;
     left: 200px;
-    animation: right-ball-animation 1.5s infinite;
+    animation: right-ball-animation alternate 1.2s infinite ease-out;
 }
 
 @-webkit-keyframes right-ball-animation {
     0%, 50% {
         transform: rotateZ(0);
-        margin-left: 0;
-        margin-top: 0;
+        transform-origin: top;
     }
 
-    80% {
-        transform: rotateZ(-24deg);
-        margin-left: 50px;
-        margin-top: -12px;
+    100% {
+        transform: rotateZ(-32deg);
+        transform-origin: top;
     }
 }
 
@@ -97,7 +86,7 @@
 
     margin: 0 auto;
 
-    height: 100px;
+    height: 150px;
     width: 1px;
 
     background-color: white;
